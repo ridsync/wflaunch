@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="menu_list_txt">
-        <item>자장면</item>
+        <item>짜장면</item>
         <item>짬뽕</item>
         <item>볶음밥</item>
         <item>라면</item>
@@ -9,6 +9,22 @@
         <item>카레덮밥</item>
         <item>햄버거</item>
         <item>피자</item>
+        <item>감자탕</item>
+        <item>순대국</item>
+        <item>갈비탕</item>
+        <item>부대찌개</item>
+        <item>떡볶이</item>
+        <item>설렁탕</item>
+        <item>김치찌개</item>
+        <item>된장찌개</item>
+        <item>돈가스</item>
+        <item>알밥</item>
+        <item>회덮밥</item>
+        <item>쌀국수</item>
+        <item>육개장</item>
+        <item>쌈밥</item>
+        <item>김치찜</item>
+        <item>점심뷔페</item>
     </array>
 
     <array name="menu_list_img">
@@ -20,6 +36,22 @@
         <item>@drawable/img6</item>
         <item>@drawable/img7</item>
         <item>@drawable/img8</item>
+        <item>@drawable/img9</item>
+        <item>@drawable/img24</item>
+        <item>@drawable/img10</item>
+        <item>@drawable/img11</item>
+        <item>@drawable/img12</item>
+        <item>@drawable/img13</item>
+        <item>@drawable/img14</item>
+        <item>@drawable/img15</item>
+        <item>@drawable/img16</item>
+        <item>@drawable/img17</item>
+        <item>@drawable/img18</item>
+        <item>@drawable/img19</item>
+        <item>@drawable/img20</item>
+        <item>@drawable/img21</item>
+        <item>@drawable/img22</item>
+        <item>@drawable/img23</item>
     </array>
 
     <array name="diag_categorys">

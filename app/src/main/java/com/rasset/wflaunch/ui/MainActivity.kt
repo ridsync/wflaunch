@@ -81,6 +81,8 @@ class MainActivity : BaseActivity() {
         arrMenusTxt = resources.getStringArray(R.array.menu_list_txt)
         arrMenusImg = resources.obtainTypedArray(R.array.menu_list_img)
 
+        TV_APPBAR_TEXT.text = "오늘의 점심"
+
         BTN_WHATFL.setOnClickListener {
 
             if (anim.isPaused){

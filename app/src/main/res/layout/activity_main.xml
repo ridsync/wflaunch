@@ -14,9 +14,7 @@
         app:elevation="0dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <include layout="@layout/custom_appbarlayout"/>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -28,8 +26,7 @@
         <FrameLayout
             android:id="@+id/FR_MAIN_CONTAINER"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/LL_MAIN_NAV_MENU">
+            android:layout_height="match_parent">
         </FrameLayout>
 
         <ImageView

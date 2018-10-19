@@ -48,7 +48,7 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
     }
 
     internal var isInitialized = true
-    lateinit var mMapView: MapView
+    private var mMapView: MapView? = null
     private val mTagItemMap = HashMap<Int, Item>()
 
     internal var apikey = "d70e8a8a32c7ffb6f3c225221c3d4e35"
@@ -69,14 +69,18 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
         query = intent.getStringExtra("keyword")
 
         mMapView = MapView(this)
-        map_view.addView(mMapView)
-//        mMapView.setDaumMapApiKey("d2d578f087b1ac748047106130fe6763")
-        mMapView.setMapViewEventListener(this)
-        mMapView.setPOIItemEventListener(this)
-// 줌 레벨 변경
-        mMapView.setCalloutBalloonAdapter(CustomCalloutBalloonAdapter())
+        map_view?.addView(mMapView)
+        mMapView?.setMapViewEventListener(this)
+        mMapView?.setPOIItemEventListener(this)
+        mMapView?.setCalloutBalloonAdapter(CustomCalloutBalloonAdapter())
 
         TV_APPBAR_TEXT.append(" : $query")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        map_view.removeAllViews()
+        mMapView = null
     }
 
     private fun startGoogleMap (){
@@ -91,7 +95,7 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
         val searcher = Searcher() // net.daum.android.map.openapi.search.Searcher
         searcher.searchKeyword(applicationContext, query, latitude, longitude, radius, page, apikey, object : OnFinishSearchListener {
             override  fun onSuccess(itemList: List<Item>) {
-                mMapView.removeAllPOIItems() // 기존 검색 결과 삭제
+                mMapView?.removeAllPOIItems() // 기존 검색 결과 삭제
                     showResult(itemList) // 검색 결과 보여줌
             }
 
@@ -159,7 +163,7 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
                 poiItem.isCustomImageAutoscale = true
                 poiItem.setCustomImageAnchor(0.5f, 1.0f)
 
-                mMapView.addPOIItem(poiItem)
+                mMapView?.addPOIItem(poiItem)
                 mTagItemMap.put(poiItem.tag, item)
             }
         }
@@ -169,9 +173,9 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
 
         if (isInitialized) {
             isInitialized = false
-            val poiItems = mMapView.getPOIItems()
-            if (poiItems.size > 0) {
-                mMapView.selectPOIItem(poiItems[0], true)
+            val poiItems = mMapView?.getPOIItems()
+            if (poiItems !=null && poiItems?.size > 0) {
+                mMapView?.selectPOIItem(poiItems[0], true)
             }
         }
     }
@@ -203,10 +207,10 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
         gps = GpsInfo(this@DiagAttentionActivity)
         // GPS 사용유무 가져오기
         gps?.let {
-            if (it.isGetLocation) {
+            if (it.isGetLocation && it.latitude > 0 && it.longitude > 0) {
                 latitude = it.latitude
                 longitude = it.longitude
-                mMapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(latitude, longitude), 1, true)
+                mMapView?.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(latitude, longitude), 1, true)
                 doSearcher()
 //                startGoogleMap()
             } else {
