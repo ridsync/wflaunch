@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dialog_dim_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg_main_bg_color_rounded_normal"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:gravity="center_horizontal" >
+
+            <LinearLayout
+                android:id="@+id/LL_CONTENTS_LAYOUT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TV_DEFAULT_TITLE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="부동산자산관리 진단프로그램 상담 개인정보 제공동의"
+                    android:textSize="@dimen/main_text_title2"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="㈜알에셋마스터리스에서는 부동산자산관리 진단프로그램에 대한 상담을 위해 개인정보를 수집 및 이용합니다."
+                    android:textSize="@dimen/main_text_body2"
+                    android:textColor="@color/main_text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="개인정보수집목적 : 부동산자산관리 진단서비스\n진행개인정보수집항목 : 성함, 휴대폰번호, 예진정보 \n이용기간 : 서비스 종료 시 개인정보 수집 및 이용 동의를 거부하실 수 있으며, 거부 시 상담 및 참여가 어렵습니다."
+                    android:textSize="@dimen/main_text_body2"
+                    android:textColor="@color/main_text_primary"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/BTN_DONE"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_confirm"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/text_size_popup_contents"
+                    android:background="@drawable/selector_button_main_color_accent_full_oval_3dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

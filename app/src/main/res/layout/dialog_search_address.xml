@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LL_SEARCH_ADDRESS"
+            android:layout_width="350dp"
+            android:layout_height="500dp"
+            android:background="@drawable/dialog_bg_main_bg_color_rounded_normal"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <com.rasset.wflaunch.ui.components.CustomWebView
+                android:id="@+id/WV_SEARCH_ADDRESS"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/TV_SELECTED_ADDRESS"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/main_bg_color"
+                android:gravity="center"
+                android:text="입력주소"
+                android:textSize="@dimen/main_text_caption"
+                android:textColor="@color/main_text_secondary"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/BTN_CANCEL"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_cancel"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/text_size_popup_contents"
+                    android:background="@drawable/selector_button_main_color_gray_oval_3dp"/>
+
+                <Button
+                    android:id="@+id/BTN_DONE"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_confirm"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/text_size_popup_contents"
+                    android:background="@drawable/selector_button_main_color_accent_oval_3dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+</RelativeLayout>

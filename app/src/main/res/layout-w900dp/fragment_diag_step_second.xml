@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CL_ROOT"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/ABL_TOP_MENUS"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/diag_tablayout_height"
+            app:elevation="0dp">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/TBL_TAB_MENUS"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/diag_tablayout_height"
+                    android:paddingLeft="50dp"
+                    android:background="@color/main_appbar_bg_color"
+                    android:scrollbars="horizontal"
+                    app:elevation="0dp"
+                    app:tabMode="scrollable"
+                    app:tabTextAppearance="@style/CustomTabWidgetText"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <com.rasset.wflaunch.ui.components.GestureViewPager
+            android:id="@+id/VP_DIAG_SURVEYS"
+            android:layout_below="@+id/ABL_TOP_MENUS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ABL_TOP_MENUS"
+            android:background="@color/main_list_divider"/>
+
+</RelativeLayout>

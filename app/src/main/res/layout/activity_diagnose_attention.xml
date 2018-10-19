@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <include layout="@layout/custom_appbarlayout"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/RL_DIAG_CONTAINER"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/TV_LABEL_NAME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:text="# 음식점명 : "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/main_text_primary"/>
+
+            <TextView
+                android:id="@+id/TV_VALUE_TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TV_LABEL_NAME"
+                android:layout_toRightOf="@+id/TV_LABEL_NAME"
+                android:layout_marginLeft="25dp"
+                android:text=""
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/main_text_secondary"/>
+
+            <TextView
+                android:id="@+id/TV_LABEL_PHONE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TV_LABEL_NAME"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:text="# 연락처 : "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/main_text_primary"/>
+
+            <TextView
+                android:id="@+id/TV_VALUE_PHONE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TV_LABEL_PHONE"
+                android:layout_toRightOf="@+id/TV_LABEL_PHONE"
+                android:layout_marginLeft="25dp"
+                android:text=""
+                android:autoLink="phone"
+                android:linksClickable="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/main_text_secondary"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

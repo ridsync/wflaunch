@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg_main_bg_color_rounded_normal"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_margin="21dp">
+
+        <ImageView
+            android:id="@+id/IV_LOGO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/icons_google48"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:id="@+id/LL_CONTENTS_LAYOUT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="21dp"
+                android:minWidth="250dp"
+                android:minHeight="120dp"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/TV_DEFAULT_CONTENTS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="스마트하우스 부동산자산관리 진단프로그램"
+                    android:textSize="@dimen/text_size_popup_contents"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/BTN_CANCEL"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_cancel"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/text_size_popup_contents"
+                    android:background="@drawable/selector_button_main_color_gray_oval_3dp"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/BTN_ALONE_DONE"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_confirm"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/text_size_popup_contents"
+                    android:background="@drawable/selector_button_main_color_accent_full_oval_3dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/BTN_DONE"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_confirm"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/text_size_popup_contents"
+                    android:background="@drawable/selector_button_main_color_accent_oval_3dp"
+                    android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

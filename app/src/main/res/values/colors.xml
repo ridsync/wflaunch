@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Project Color -->
+    // Main
+    <color name="main_transparent">#00000000</color>
+    <color name="main_primary_color">#F76800</color>
+    <color name="main_primary_dark_color">#F76800</color>
+    <color name="main_accent_color">#FFEECC06</color>
+    <color name="main_bg_color">#fafafa</color>
+    <color name="main_appbar_bg_color">#ffffff</color>
+
+    <color name="main_appbar_underline">#1A000000</color>
+    <color name="main_appbar_boxline">#dddddd</color>
+    <color name="main_appbar_list_divider">#dddddd</color>
+    <color name="main_appbar_button_disabled">#dddddd</color>
+    <color name="main_dialog_dim_color">@color/color_black_23</color>
+    <color name="main_dialog_bg_color">@color/main_bg_color</color>
+    <color name="main_dialog_button_bg_gray">#dddddd</color>
+    <color name="main_raised_button_bg_white">#ffffff</color>
+    <color name="main_side_menu_bg_color">#2C3D50</color>
+    <color name="main_nav_menu_selected_color">#EBBF06</color>
+
+    <color name="main_list_divider">#dddddd</color>
+    <color name="main_text_primary">#222222</color>
+    <color name="main_text_secondary">#7f7f7f</color>
+    <color name="main_text_input_hint">#a8a8a8</color>
+    <color name="main_text_input_line">#dddddd</color>
+    <color name="main_btn_border">#7f7f7f</color>
+
+    <color name="colorControlNormal">@color/text_color_dd</color>
+    <color name="colorControlActivated">#F76800</color>
+    <color name="colorControlHighlight">#CCFFCF06</color>
+
+    <!-- Basic Color -->
+    <color name="basic_color_white">#ffffff</color>
+
+    <!-- Text Color -->
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_11">#110f10</color>
+    <color name="text_color_1f">#1f1f1f</color>
+    <color name="text_color_4b">#4b4b4b</color>
+    <color name="text_color_ab">#ababab</color>
+    <color name="text_color_dd">#dddddd</color>
+
+    <!-- Trans color -->
+    <color name="color_black_05">#0c000000</color>
+    <color name="color_black_08">#14000000</color>
+    <color name="color_black_12">#2d000000</color>
+    <color name="color_black_23">#3A000000</color>
+    <color name="color_black_30">#4c000000</color>
+    <color name="color_black_33">#54000000</color>
+    <color name="color_black_40">#66000000</color>
+    <color name="color_black_54">#89000000</color>
+    <color name="color_black_70">#B2000000</color>
+    <color name="color_black_87">#dd000000</color>
+</resources>

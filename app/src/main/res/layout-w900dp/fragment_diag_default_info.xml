@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context=".ui.SplashActivity"
+    android:background="@color/main_bg_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            card_view:cardElevation="3dp"
+            card_view:cardBackgroundColor="@color/basic_color_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="50dp"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            android:paddingBottom="100dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TV_CUSTOMER_NAME"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:text="이름(실명)"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:theme="@style/CustomEditText"
+                    android:id="@+id/ET_CUSTOMER_NAME"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/TV_CUSTOMER_NAME"
+                    android:hint="이름"
+                    android:textColorHint="@color/main_text_input_hint"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/main_text_input_hint"
+                    android:textSize="@dimen/main_text_body1" />
+
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/ET_CUSTOMER_NAME"
+                android:background="@color/main_list_divider"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TV_CUSTOMER_PHONE"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:text="전화번호"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:theme="@style/CustomEditText"
+                    android:id="@+id/ET_CUSTOMER_PHONE"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/TV_CUSTOMER_PHONE"
+                    android:hint="전화번호"
+                    android:inputType="numberDecimal"
+                    android:maxLength="13"
+                    android:textColorHint="@color/main_text_input_hint"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/main_text_input_hint"
+                    android:textSize="@dimen/main_text_body1" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/ET_CUSTOMER_PHONE"
+                    android:background="@color/main_list_divider"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView xmlns:tools=" http://schemas.android.com/tools"
+                    android:id="@+id/TV_CONSULTING_DATE"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:text="상담일"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                <Spinner
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/TV_CONSULTING_DATE"/>
+                <TextView
+                    android:id="@+id/TV_CONSULTING_DATE_YMD"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/TV_CONSULTING_DATE"
+                    android:text="2018-09-01"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+                <Spinner
+                    android:layout_width="210dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@+id/TV_CONSULTING_DATE_YMD"/>
+                <TextView
+                    android:id="@+id/TV_CONSULTING_DATE_START_HOUR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@+id/TV_CONSULTING_DATE_YMD"
+                    android:text="14:00"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/TV_CONSULTING_DATE_DASH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/TV_CONSULTING_DATE_START_HOUR"
+                    android:text=" - "
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/TV_CONSULTING_DATE_END_HOUR"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/TV_CONSULTING_DATE_DASH"
+                    android:text="15:00"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_alignLeft="@+id/TV_CONSULTING_DATE_YMD"
+                    android:layout_alignRight="@+id/TV_CONSULTING_DATE_YMD"
+                    android:background="@color/main_list_divider"
+                    android:layout_alignParentBottom="true"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_alignLeft="@+id/TV_CONSULTING_DATE_START_HOUR"
+                    android:layout_alignRight="@+id/TV_CONSULTING_DATE_END_HOUR"
+                    android:background="@color/main_list_divider"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:text="회원등급"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:theme="@style/CustomEditText"
+                    android:id="@+id/ET_CUSTOMER_LEVEL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/TV_CUSTOMER_PHONE"
+                    android:hint="비회원"
+                    android:textColorHint="@color/main_text_input_hint"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/main_text_input_hint"
+                    android:textSize="@dimen/main_text_body1" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/ET_CUSTOMER_PHONE"
+                    android:background="@color/main_list_divider"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TV_CUSTOMER_LEVEL"
+                    android:layout_width="160dp"
+                    android:layout_height="56dp"
+                    android:text="진단분야"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                    <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                        android:id="@+id/RG_DIAG_FIELD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/RB_DIAG_INVEST"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="31dp"
+                                android:layout_marginRight="30dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="부동산재테크"
+                                android:singleLine="true"
+                                android:textColor="@color/main_text_secondary"
+                                android:textSize="@dimen/main_text_body2"/>
+
+                            <RadioButton
+                                android:id="@+id/RB_DIAG_MD"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.6"
+                                android:layout_height="31dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="토지/개발(MD)"
+                                android:singleLine="true"
+                                android:textColor="@color/main_text_secondary"
+                                android:textSize="@dimen/main_text_body2"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/RB_DIAG_TAX"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="31dp"
+                                android:layout_marginRight="30dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="부동산 세금"
+                                android:singleLine="true"
+                                android:textColor="@color/main_text_secondary"
+                                android:textSize="@dimen/main_text_body2"/>
+
+                            <RadioButton
+                                android:id="@+id/RB_DIAG_HOME_INTE"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.6"
+                                android:layout_height="31dp"
+                                android:drawablePadding="10dp"
+                                android:paddingLeft="10dp"
+                                android:text="홈스테이징/인테리어"
+                                android:singleLine="true"
+                                android:textColor="@color/main_text_secondary"
+                                android:textSize="@dimen/main_text_body2"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/RB_DIAG_CM"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="31dp"
+                                android:layout_marginRight="30dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="건축./리모델링(CM)"
+                                android:singleLine="true"
+                                android:textColor="@color/main_text_secondary"
+                                android:textSize="@dimen/main_text_body2"/>
+
+                            <RadioButton
+                                android:id="@+id/RB_DIAG_MANAGEMENT"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.6"
+                                android:layout_height="31dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:text="주택임대관리"
+                                android:singleLine="true"
+                                android:textColor="@color/main_text_secondary"
+                                android:textSize="@dimen/main_text_body2"/>
+
+                        </LinearLayout>
+                        </LinearLayout>
+                    </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="56dp"
+                    android:text="질문사항"
+                    android:textSize="@dimen/main_text_body1"
+                    android:textColor="@color/main_text_secondary"
+                    android:gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:padding="20dp"
+                    android:background="@drawable/shape_bg_white_border_gray_oval_3dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:theme="@style/CustomEditText"
+                        android:id="@+id/ET_CUSTOMER_QUESTION"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/TV_CUSTOMER_PHONE"
+                        android:hint="질문사항"
+                        android:gravity="top"
+                        android:textColorHint="@color/main_text_input_hint"
+                        android:lineSpacingExtra="3dp"
+                        android:minLines="1"
+                        android:maxLines="10"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:paddingBottom="12dp"
+                        android:background="@null"
+                        android:textColor="@color/main_text_secondary"
+                        android:textSize="@dimen/main_text_body1" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/ACB_PRIVACY_AGREE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="개인정보취급방침동의"
+                    android:textColor="@color/main_text_secondary"
+                    android:textSize="@dimen/main_text_body1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="(필수)"
+                    android:singleLine="true"
+                    android:textColor="#F31C1C"
+                    android:textSize="@dimen/main_text_body1"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/BTN_PRIVACY_SHOW"
+                    android:layout_width="100dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/selector_body_button_border_gray_oval_90dp"
+                    android:text="보기"
+                    android:textColor="@drawable/selector_body_button_text_color"
+                    android:textSize="@dimen/main_text_body1"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

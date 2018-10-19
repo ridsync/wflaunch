@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="270dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        card_view:cardElevation="2dp"
+        card_view:cardBackgroundColor="@color/basic_color_white">
+
+    <RelativeLayout
+        android:id="@+id/RL_ADVISOR_INVEST"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/RippleEffect">
+
+        <ImageView
+            android:id="@+id/IV_ADVISOR_INVEST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/kms"/>
+
+        <ImageView
+            android:id="@+id/IV_ADVISOR_INVEST_CHECK"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/profile_select"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/TV_ADVISOR_DIAG_FIELD"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/IV_ADVISOR_INVEST"
+            android:text="부동산 재테크(매도/매수)"
+            android:textColor="@color/main_text_primary"
+            android:textSize="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/TV_ADVISOR_DIAG_FIELD"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/TV_ADVISOR_NAME"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="김민수"
+            android:textStyle="bold"
+            android:textColor="@color/main_text_primary"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/TV_ADVISOR_SUFFIX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="전문위원"
+            android:textColor="@color/main_text_primary"
+            android:textSize="@dimen/main_text_body1"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="270dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        card_view:cardElevation="2dp"
+        card_view:cardBackgroundColor="@color/basic_color_white">
+    <RelativeLayout
+        android:id="@+id/RL_ADVISOR_MD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/RippleEffect">
+
+        <ImageView
+            android:id="@+id/IV_ADVISOR_MD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ksc"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/IV_ADVISOR_MD_CHECK"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/profile_select"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/TV_ADVISOR_DIAG_FIELD2"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/IV_ADVISOR_MD"
+            android:text="토지/개발(MD) 컨셉"
+            android:textColor="@color/main_text_primary"
+            android:textSize="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/TV_ADVISOR_DIAG_FIELD2"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+                <TextView
+                android:id="@+id/TV_ADVISOR_NAME2"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="고상철"
+                android:textStyle="bold"
+                android:textColor="@color/main_text_primary"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/TV_ADVISOR_SUFFIX2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="전문위원"
+                android:textColor="@color/main_text_primary"
+                android:textSize="@dimen/main_text_body1"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="270dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="50dp"
+        card_view:cardElevation="2dp"
+        card_view:cardBackgroundColor="@color/basic_color_white">
+    <RelativeLayout
+        android:id="@+id/RL_ADVISOR_TAX"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/RippleEffect">
+
+        <ImageView
+            android:id="@+id/IV_ADVISOR_TAX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/kys_2"
+            android:adjustViewBounds="true"/>
+
+        <ImageView
+            android:id="@+id/IV_ADVISOR_TAX_CHECK"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/profile_select"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/TV_ADVISOR_DIAG_FIELD3"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/IV_ADVISOR_TAX"
+            android:text="부동산 세금 절세"
+            android:textColor="@color/main_text_primary"
+            android:textSize="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/TV_ADVISOR_DIAG_FIELD3"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/TV_ADVISOR_NAME3"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="김윤석"
+                android:textColor="@color/main_text_primary"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/TV_ADVISOR_SUFFIX3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="전문위원"
+                android:textColor="@color/main_text_primary"
+                android:textSize="@dimen/main_text_body1"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <!-- 2row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="270dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="30dp"
+        card_view:cardElevation="2dp"
+        card_view:cardBackgroundColor="@color/basic_color_white">
+        <RelativeLayout
+            android:id="@+id/RL_ADVISOR_HOME_INTE"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/RippleEffect">
+
+            <ImageView
+                android:id="@+id/IV_ADVISOR_HOME_INTE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/kys_1"/>
+
+            <ImageView
+                android:id="@+id/IV_ADVISOR_HOME_INTE_CHECK"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/profile_select"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/TV_ADVISOR_DIAG_FIELD4"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_marginTop="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/IV_ADVISOR_HOME_INTE"
+                android:text="부동산홈스테이징/매매연출"
+                android:textColor="@color/main_text_primary"
+                android:textSize="18dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/TV_ADVISOR_DIAG_FIELD4"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/TV_ADVISOR_NAME4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="김영숙"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/TV_ADVISOR_SUFFIX4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="전문위원"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/main_text_body1"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="270dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="30dp"
+            card_view:cardElevation="2dp"
+            card_view:cardBackgroundColor="@color/basic_color_white">
+            <RelativeLayout
+                android:id="@+id/RL_ADVISOR_CM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/RippleEffect">
+
+                <ImageView
+                    android:id="@+id/IV_ADVISOR_CM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/lts"
+                    android:adjustViewBounds="true"/>
+
+                <ImageView
+                    android:id="@+id/IV_ADVISOR_CM_CHECK"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/profile_select"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView
+                    android:id="@+id/TV_ADVISOR_DIAG_FIELD6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/IV_ADVISOR_CM"
+                    android:text="신축/리모델링/시공(CM)"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="18dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/TV_ADVISOR_DIAG_FIELD6"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/TV_ADVISOR_NAME6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="이택수"
+                        android:textColor="@color/main_text_primary"
+                        android:textSize="30dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/TV_ADVISOR_SUFFIX6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="전문위원"
+                        android:textColor="@color/main_text_primary"
+                        android:textSize="@dimen/main_text_body1"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="270dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="30dp"
+            card_view:cardElevation="2dp"
+            card_view:cardBackgroundColor="@color/basic_color_white">
+            <RelativeLayout
+                android:id="@+id/RL_ADVISOR_MANAGEMENT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/RippleEffect">
+
+                <ImageView
+                    android:id="@+id/IV_ADVISOR_MANAGEMENT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/pjs"
+                    android:adjustViewBounds="true"/>
+
+                <ImageView
+                    android:id="@+id/IV_ADVISOR_MANAGEMENT_CHECK"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/profile_select"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+                <TextView
+                    android:id="@+id/TV_ADVISOR_DIAG_FIELD5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/IV_ADVISOR_MANAGEMENT"
+                    android:text="주택임대관리"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="18dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/TV_ADVISOR_DIAG_FIELD5"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/TV_ADVISOR_NAME5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="박진상"
+                        android:textColor="@color/main_text_primary"
+                        android:textSize="30dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/TV_ADVISOR_SUFFIX5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="전문위원"
+                        android:textColor="@color/main_text_primary"
+                        android:textSize="@dimen/main_text_body1"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*상담분야 및 위원진 선택은 중복선택 가능! 단, 해당 상담 진단권을 소지하고 있어야 가능합니다."
+            android:textColor="@color/main_text_secondary"
+            android:textSize="@dimen/main_text_caption"/>
+    </LinearLayout>
+</LinearLayout>

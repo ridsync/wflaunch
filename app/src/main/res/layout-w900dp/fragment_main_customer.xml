@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context=".ui.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/IV_USER_PROFILE_IMG"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/profile_default"
+            android:background="@drawable/shape_bg_gray_oval_90dp"/>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/shape_bg_gray_oval_90dp"/>
+
+        <TextView
+            android:id="@+id/TV_USER_PROFILE_NAME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/IV_USER_PROFILE_IMG"
+            android:singleLine="true"
+            android:text="홍길동"
+            android:textColor="@color/main_text_primary"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/TV_USER_PROFILE_NAME"
+            android:layout_centerVertical="true"
+            android:text=" 인턴"
+            android:textColor="@color/main_text_primary"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/IB_TEMP_NEW_CUSTOMER"
+            android:layout_alignWithParentIfMissing="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_member"
+                android:background="@null"/>
+
+            <TextView
+                android:id="@+id/TV_CUSTOMER_COUNT"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="회원 00명"
+                android:textColor="@color/main_text_primary"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/IB_TEMP_NEW_CUSTOMER"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/ic_member_add"
+            android:background="@null"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/main_list_divider"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:paddingTop="50dp"
+            android:paddingLeft="24dp"
+            android:visibility="visible">
+
+            <RadioGroup
+                android:id="@+id/RG_FILTER_GROUP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/RB_FILTER_ALL">
+            <RadioButton
+                android:id="@+id/RB_FILTER_ALL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:checked="true"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:button="@drawable/rbutton_customer_filter"
+                android:text="전체"
+                android:textStyle="normal"
+                android:singleLine="true"
+                android:textColor="@color/main_text_secondary"
+                android:textSize="@dimen/main_text_body2"/>
+
+            <RadioButton
+                android:id="@+id/RB_FILTER_NONMEMBER"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RB_FILTER_ALL"
+                android:paddingLeft="10dp"
+                android:button="@drawable/rbutton_customer_filter"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="비회원"
+                android:checked="false"
+                android:singleLine="true"
+                android:textColor="@color/main_text_secondary"
+                android:textSize="@dimen/main_text_body2"/>
+
+            <RadioButton
+                android:id="@+id/RB_FILTER_NORMAL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RB_FILTER_NONMEMBER"
+                android:paddingLeft="10dp"
+                android:button="@drawable/rbutton_customer_filter"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="일반회원"
+                android:singleLine="true"
+                android:textColor="@color/main_text_secondary"
+                android:textSize="@dimen/main_text_body2"/>
+
+            <RadioButton
+                android:id="@+id/RB_FILTER_SILVER"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:layout_below="@+id/RB_FILTER_NORMAL"
+                android:paddingLeft="10dp"
+                android:button="@drawable/rbutton_customer_filter"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="실버"
+                android:checked="false"
+                android:singleLine="true"
+                android:textColor="@color/main_text_secondary"
+                android:textSize="@dimen/main_text_body2"/>
+
+            <RadioButton
+                android:id="@+id/RB_FILTER_NOVELIE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RB_FILTER_SILVER"
+                android:paddingLeft="10dp"
+                android:button="@drawable/rbutton_customer_filter"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="노블리에"
+                android:checked="false"
+                android:singleLine="true"
+                android:textColor="@color/main_text_secondary"
+                android:textSize="@dimen/main_text_body2"/>
+
+            <RadioButton
+                android:id="@+id/RB_FILTER_RICH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RB_FILTER_NOVELIE"
+                android:paddingLeft="10dp"
+                android:button="@drawable/rbutton_customer_filter"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="리치"
+                android:checked="false"
+                android:singleLine="true"
+                android:textColor="@color/main_text_secondary"
+                android:textSize="@dimen/main_text_body2"/>
+
+            <RadioButton
+                android:id="@+id/RB_FILTER_ROYAL"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:layout_below="@+id/RB_FILTER_RICH"
+                android:paddingLeft="10dp"
+                android:button="@drawable/rbutton_customer_filter"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:text="로얄패밀리"
+                android:checked="false"
+                android:singleLine="true"
+                android:textColor="@color/main_text_secondary"
+                android:textSize="@dimen/main_text_body2"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/SR_REFRESH_LAYOUT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/RCV_CUSTOMER_LIST"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="80dp"
+                android:paddingLeft="80dp"
+                android:clipChildren="false"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TV_EMPTY_MSG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/main_text_secondary"
+        android:textSize="@dimen/main_text_body1"
+        android:text="회원정보 없음"
+        android:visibility="gone"/>
+</RelativeLayout>

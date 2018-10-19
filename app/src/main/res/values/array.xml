@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="menu_list_txt">
+        <item>자장면</item>
+        <item>짬뽕</item>
+        <item>볶음밥</item>
+        <item>라면</item>
+        <item>김밥</item>
+        <item>카레덮밥</item>
+        <item>햄버거</item>
+        <item>피자</item>
+    </array>
+
+    <array name="menu_list_img">
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+        <item>@drawable/img4</item>
+        <item>@drawable/img5</item>
+        <item>@drawable/img6</item>
+        <item>@drawable/img7</item>
+        <item>@drawable/img8</item>
+    </array>
+
+    <array name="diag_categorys">
+    <item>@string/diag_txt_asset_sell</item>
+    <item>@string/diag_txt_asset_buy</item>
+    <item>@string/diag_txt_md</item>
+    <item>@string/diag_txt_tax</item>
+    <item>@string/diag_txt_tax_2</item>
+    <item>@string/diag_txt_home_inte</item>
+    <item>@string/diag_txt_management</item>
+    <item>@string/diag_txt_cm</item>
+    </array>
+</resources>

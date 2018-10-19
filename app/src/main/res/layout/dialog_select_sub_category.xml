@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_dialog_dim_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg_main_bg_color_rounded_normal"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:gravity="center_horizontal" >
+
+            <LinearLayout
+                android:id="@+id/LL_CONTENTS_LAYOUT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TV_DEFAULT_TITLE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="부동산 재테크 진단선택"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/main_text_title2"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_text_primary"/>
+
+                <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                    android:id="@+id/RG_DIAG_RESTATE_TYPE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="60dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <RadioButton
+                        android:tag="11"
+                        android:id="@+id/RB_CAT_NO1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="매도진단"
+                        android:singleLine="true"
+                        android:checked="true"
+                        android:textColor="@color/main_text_secondary"
+                        android:textSize="@dimen/main_text_body1"/>
+
+                    <RadioButton
+                        android:tag="21"
+                        android:id="@+id/RB_CAT_NO2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="매수진단"
+                        android:singleLine="true"
+                        android:textColor="@color/main_text_secondary"
+                        android:textSize="@dimen/main_text_body1"/>
+
+                    <RadioButton
+                        android:tag="31"
+                        android:id="@+id/RB_CAT_NO3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="매도/매수진단"
+                        android:singleLine="true"
+                        android:textColor="@color/main_text_secondary"
+                        android:textSize="@dimen/main_text_body1"/>
+                </LinearLayout>
+                </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/BTN_DONE"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_confirm"
+                    android:textColor="@color/main_text_primary"
+                    android:textSize="@dimen/text_size_popup_contents"
+                    android:background="@drawable/selector_button_main_color_accent_full_oval_3dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

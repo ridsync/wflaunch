@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">부동산자산관리\n진단프로그램</string>
+    <string name="title_test_detail">test Detail</string>
+
+    // Text
+    <string name="popup_alert_not_exist_user_ask_login">UserID None Exist</string>
+    <string name="common_alert">알림</string>
+    <string name="common_confirm">확인</string>
+
+    // Btn
+    <string name="btn_confirm">확인</string>
+    <string name="btn_cancel">취소</string>
+    <string name="btn_next">다음</string>
+    <string name="btn_completed">완료</string>
+
+    // ADVISOR_SURVEYS_TITLE
+    <string name="diag_txt_asset_sell">자장면</string>
+    <string name="diag_txt_asset_buy">짬뽕</string>
+    <string name="diag_txt_md">볶음밥</string>
+    <string name="diag_txt_tax">라면</string>
+    <string name="diag_txt_tax_2">김밥</string>
+    <string name="diag_txt_home_inte">카레덮밥</string>
+    <string name="diag_txt_cm">햄버거</string>
+    <string name="diag_txt_management">피자</string>
+
+</resources>

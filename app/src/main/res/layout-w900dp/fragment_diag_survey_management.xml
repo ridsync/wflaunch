@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/main_bg_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                card_view:cardElevation="3dp"
+                card_view:cardBackgroundColor="@color/basic_color_white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="50dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:paddingBottom="100dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/TV_DIAG_TYPE_LABEL_LOCATION"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="1. 소유하고 계신 부동산 소재지는?"
+                            android:textSize="30dp"
+                            android:textColor="@color/main_text_primary"
+                            android:gravity="center_vertical"/>
+
+                        <TextView
+                            android:id="@+id/TV_LOCATION_ADDRESS"
+                            android:layout_width="160dp"
+                            android:layout_height="46dp"
+                            android:layout_toLeftOf="@+id/BTN_SEARCH_ADDRESS_SHOW"
+                            android:layout_below="@+id/TV_DIAG_TYPE_LABEL_LOCATION"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="30dp"
+                            android:text="주소찾기"
+                            android:textSize="@dimen/main_text_body1"
+                            android:textColor="@color/main_text_secondary"
+                            android:gravity="center_vertical"/>
+
+                        <Button
+                            android:id="@+id/BTN_SEARCH_ADDRESS_SHOW"
+                            android:layout_width="152dp"
+                            android:layout_height="56dp"
+                            android:layout_below="@+id/TV_DIAG_TYPE_LABEL_LOCATION"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/selector_body_button_border_gray_oval_90dp"
+                            android:text="주소찾기"
+                            android:textColor="@drawable/selector_body_button_text_color"
+                            android:textSize="@dimen/main_text_body1"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/TV_LOCATION_ADDRESS"
+                            android:layout_alignRight="@+id/TV_LOCATION_ADDRESS"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/main_list_divider"/>
+
+                        <EditText
+                            android:theme="@style/CustomEditText"
+                            android:id="@+id/ET_LOCATION_ADDRESS_DETAIL"
+                            android:layout_width="160dp"
+                            android:layout_height="56dp"
+                            android:layout_below="@+id/TV_LOCATION_ADDRESS"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignRight="@+id/TV_LOCATION_ADDRESS"
+                            android:layout_marginTop="30dp"
+                            android:hint="상세주소"
+                            android:maxLength="50"
+                            android:textColorHint="@color/main_text_secondary"
+                            android:imeOptions="actionNext"
+                            android:paddingBottom="12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/main_text_secondary"
+                            android:textSize="@dimen/main_text_body1" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp">
+
+                        <TextView
+                            android:id="@+id/TV_LABEL_CONSULT_TYPE"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="2. 수익형 부동산 종류는?"
+                            android:textSize="30dp"
+                            android:textColor="@color/main_text_primary"
+                            android:gravity="center_vertical"/>
+
+                        <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                            android:id="@+id/RG_CONSULT_TYPE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TV_LABEL_CONSULT_TYPE"
+                            android:layout_marginTop="30dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:tag="11"
+                                        android:id="@+id/RB_CONSULT_TYPE_IMDAE"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="임대주택"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="21"
+                                        android:id="@+id/RB_CONSULT_TYPE_STORE"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="상가주택"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="31"
+                                        android:id="@+id/RB_CONSULT_TYPE_BUILDING"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="상가빌딩"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+
+                                    <RadioButton
+                                        android:tag="41"
+                                        android:id="@+id/RB_CONSULT_TYPE_PARCEL_STORE"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:paddingLeft="10dp"
+                                        android:text="분양상가"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:tag="51"
+                                            android:id="@+id/RB_CONSULT_TYPE_ETC"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:drawablePadding="10dp"
+                                            android:gravity="center_vertical"
+                                            android:paddingLeft="10dp"
+                                            android:text="기타"
+                                            android:singleLine="true"
+                                            android:textColor="@color/main_text_secondary"
+                                            android:textSize="@dimen/main_text_body1"/>
+
+                                        <EditText
+                                            android:theme="@style/CustomEditText"
+                                            android:id="@+id/ET_CONSULT_TYPE_ETC"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="56dp"
+                                            android:layout_marginLeft="27dp"
+                                            android:minWidth="400dp"
+                                            android:hint="20자 이내 입력"
+                                            android:maxLength="30"
+                                            android:textColorHint="@color/main_text_secondary"
+                                            android:imeOptions="actionNext"
+                                            android:paddingBottom="12dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/main_text_secondary"
+                                            android:textSize="@dimen/main_text_body1" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp">
+
+                        <TextView
+                            android:id="@+id/TV_DIAG_TYPE_LABEL_CONSULT_FIELD"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="3. 부동산 임대관리 상담 받고 싶은 분야는?"
+                            android:textSize="30dp"
+                            android:textColor="@color/main_text_primary"
+                            android:gravity="center_vertical"/>
+
+                        <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                            android:id="@+id/RG_CONSULT_FIELD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TV_DIAG_TYPE_LABEL_CONSULT_FIELD"
+                            android:layout_marginTop="30dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:tag="11"
+                                        android:id="@+id/RB_CONSULT_FIELD_EMPTY"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="공실고민"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="21"
+                                        android:id="@+id/RB_CONSULT_FIELD_MINWON"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1.1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="시설민원고민"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="31"
+                                        android:id="@+id/RB_CONSULT_FIELD_PAYMENT"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1.1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="임대료연체고민"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+
+                                    <RadioButton
+                                        android:tag="41"
+                                        android:id="@+id/RB_CONSULT_FIELD_REVENUE"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1.4"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:paddingLeft="10dp"
+                                        android:text="임대수익률 인상고민"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:tag="51"
+                                            android:id="@+id/RB_CONSULT_FIELD_ETC"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:drawablePadding="10dp"
+                                            android:gravity="center_vertical"
+                                            android:paddingLeft="10dp"
+                                            android:text="기타"
+                                            android:singleLine="true"
+                                            android:textColor="@color/main_text_secondary"
+                                            android:textSize="@dimen/main_text_body1"/>
+
+                                        <EditText
+                                            android:theme="@style/CustomEditText"
+                                            android:id="@+id/ET_CONSULT_FIELD_ETC"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="56dp"
+                                            android:layout_marginLeft="27dp"
+                                            android:minWidth="400dp"
+                                            android:hint="20자 이내 입력"
+                                            android:maxLength="30"
+                                            android:textColorHint="@color/main_text_input_hint"
+                                            android:imeOptions="actionNext"
+                                            android:paddingBottom="12dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/main_text_secondary"
+                                            android:textSize="@dimen/main_text_body1" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp">
+
+                        <TextView
+                            android:id="@+id/TV_LABEL_LESSEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="4. 수익형부동산 임차인 수는?"
+                            android:textSize="30dp"
+                            android:textColor="@color/main_text_primary"
+                            android:gravity="center_vertical"/>
+
+                        <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                            android:id="@+id/RG_LESSEE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TV_LABEL_LESSEE"
+                            android:layout_marginTop="30dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:tag="11"
+                                        android:id="@+id/RB_LESSEE_COUNT_1"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="1명"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="21"
+                                        android:id="@+id/RB_LESSEE_COUNT_2"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="2 ~ 5명"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="31"
+                                        android:id="@+id/RB_LESSEE_COUNT_3"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="5 ~ 10명"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+
+                                    <RadioButton
+                                        android:tag="41"
+                                        android:id="@+id/RB_LESSEE_COUNT_4"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:paddingLeft="10dp"
+                                        android:text="10명 이상"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp">
+
+                        <TextView
+                            android:id="@+id/TV_TAX_LABEL_ESTIMATE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="5. 수익형부동산 임대수익을 극대화하기 위해 인테리어/리모델링 공사 견적을 받고 싶나요?"
+                            android:lines="2"
+                            android:textSize="30dp"
+                            android:textColor="@color/main_text_primary"
+                            android:gravity="center_vertical"/>
+
+                        <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                            android:id="@+id/RG_ESTIMATE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TV_TAX_LABEL_ESTIMATE"
+                            android:layout_marginTop="30dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:tag="11"
+                                        android:id="@+id/RB_ESTIMATE_YES"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="예"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="21"
+                                        android:id="@+id/RB_ESTIMATE_NO"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="아니오"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp">
+
+                        <TextView
+                            android:id="@+id/TV_TAX_LABEL_LEASE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="6. 수익형부동산을 본사에서 마스터리스(전체임대)가 가능하다면 의사는?"
+                            android:lines="2"
+                            android:textSize="30dp"
+                            android:textColor="@color/main_text_primary"
+                            android:gravity="center_vertical"/>
+
+                        <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                            android:id="@+id/RG_LEASE"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TV_TAX_LABEL_LEASE"
+                            android:layout_marginTop="30dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:tag="11"
+                                        android:id="@+id/RB_LEASE_YES"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="예"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="21"
+                                        android:id="@+id/RB_LEASE_NO"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="아니오"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp">
+
+                        <TextView
+                            android:id="@+id/TV_TAX_LABEL_NEED_CONSULT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="7. 수익형부동산 임대사업 고민해결과 임대수익률 극대화를 위해 컨설팅을 별도로 받을 생각은?"
+                            android:lines="2"
+                            android:textSize="30dp"
+                            android:textColor="@color/main_text_primary"
+                            android:gravity="center_vertical"/>
+
+                        <com.rasset.wflaunch.ui.components.RecursiveRadioGroup
+                            android:id="@+id/RG_NEED_CONSULT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/TV_TAX_LABEL_NEED_CONSULT"
+                            android:layout_marginTop="30dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingTop="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:tag="11"
+                                        android:id="@+id/RB_NEED_CONSULT_YES"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="예"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                    <RadioButton
+                                        android:tag="21"
+                                        android:id="@+id/RB_NEED_CONSULT_NO"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="match_parent"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="10dp"
+                                        android:text="아니오"
+                                        android:singleLine="true"
+                                        android:textColor="@color/main_text_secondary"
+                                        android:textSize="@dimen/main_text_body1"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </com.rasset.wflaunch.ui.components.RecursiveRadioGroup>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

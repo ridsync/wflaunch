@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rasset.wflaunch">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.hardware.location.gps" />
+
+    <application
+        android:name=".core.TabApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_camera"
+        android:label="${appName}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.kakao.sdk.AppKey"
+            android:value="d2d578f087b1ac748047106130fe6763"/>
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="${appName}">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TutorialActivity"
+            android:label="${appName}"
+            android:theme="@style/TutorialTheme">
+        </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="${appName}">
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="${appName}">
+        </activity>
+        <activity
+            android:name=".ui.DiagAttentionActivity"
+            android:label="${appName}"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
