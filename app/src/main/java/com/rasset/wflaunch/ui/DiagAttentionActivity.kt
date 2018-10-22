@@ -61,7 +61,7 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
     internal var spin_mart_filter: Spinner? = null
     // GPSTracker class
     private var gps: GpsInfo? = null
-
+    private var item:Item? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diagnose_attention)
@@ -76,6 +76,20 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
             mMapView?.setCalloutBalloonAdapter(CustomCalloutBalloonAdapter())
         }
         TV_APPBAR_TEXT.append(" : $query")
+
+
+
+        BTN_PHONE.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:${item?.phone}"))
+            startActivity(intent)
+        }
+        BTN_SHARE.setOnClickListener {
+            val shareIntent = Intent(Intent.ACTION_SEND)
+            shareIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            shareIntent.type = "text/plain"
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "${item?.title} / ${item?.address} / ${item?.phone}")
+            startActivity(shareIntent)
+        }
     }
 
     override fun onStop() {
@@ -129,21 +143,10 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
             textViewDesc.text = item.address
 
             TV_LABEL_NAME.post {
+                this@DiagAttentionActivity.item = item
                 TV_LABEL_NAME.text = item.title
                 TV_VALUE_PHONE.text = item.phone
                 TV_LABEL_ADDRESS.text = item.address
-
-                BTN_PHONE.setOnClickListener {
-                    val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:${item.phone}"))
-                    startActivity(intent)
-                }
-                BTN_SHARE.setOnClickListener {
-                    val shareIntent = Intent(Intent.ACTION_SEND)
-                    shareIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                    shareIntent.type = "text/plain"
-                    shareIntent.putExtra(Intent.EXTRA_TEXT, "${item.title} / ${item.address} / ${item.phone}")
-                    startActivity(shareIntent)
-                }
             }
             return mCalloutBalloon
         }
