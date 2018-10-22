@@ -68,12 +68,13 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
 
         query = intent.getStringExtra("keyword")
 
-        mMapView = MapView(this)
-        map_view?.addView(mMapView)
-        mMapView?.setMapViewEventListener(this)
-        mMapView?.setPOIItemEventListener(this)
-        mMapView?.setCalloutBalloonAdapter(CustomCalloutBalloonAdapter())
-
+        if(mMapView == null) {
+            mMapView = MapView(this)
+            map_view?.addView(mMapView)
+            mMapView?.setMapViewEventListener(this)
+            mMapView?.setPOIItemEventListener(this)
+            mMapView?.setCalloutBalloonAdapter(CustomCalloutBalloonAdapter())
+        }
         TV_APPBAR_TEXT.append(" : $query")
     }
 
@@ -145,10 +146,11 @@ class DiagAttentionActivity : BaseActivity() ,MapView.MapViewEventListener, MapV
 
         // TODO 이마트 , 홈플러스 , 롯데마트 , 코스트코
         // 이외 다른 검색된것들 제외.  클릭할대 체크하여 넘길수있는 지점만 디테일화면 이동.
+        Logger.d("MenuList","MenuListSize = ${itemList.size}")
         for (i in itemList.indices) {
             val item = itemList[i]
-            if (item.title != null && item.title.contains(query)
-                    && item.category.contains("음식점")) {
+            Logger.d("MenuList","Menu title = ${item.title}")
+            if (item.title != null && item.category.contains("음식점")) {
 
                 val poiItem = MapPOIItem()
                 poiItem.itemName = item.title

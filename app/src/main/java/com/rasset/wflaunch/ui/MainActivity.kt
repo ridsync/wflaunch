@@ -40,6 +40,7 @@ import android.view.animation.Animation.INFINITE
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.rasset.wflaunch.ui.mapapi.GpsInfo
 import java.util.*
 
@@ -70,11 +71,11 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_part2)
 
         gpsInfo = GpsInfo(this)
         val anim = ObjectAnimator.ofFloat(IV_DART, "rotation", 3600f)
-        anim.duration = 1000
+        anim.duration = 3000
         anim.interpolator = LinearInterpolator()
         anim.repeatCount = 100
 
@@ -86,17 +87,23 @@ class MainActivity : BaseActivity() {
         BTN_WHATFL.setOnClickListener {
 
             if (anim.isPaused){
-                anim.resume()// keep rotation after animation
+//                anim.resume()// keep rotation after animation
                 TV_MENU_TXT.text = "또 골라요?"
             } else {
-                anim.start()
+//                anim.start()
             }
-            Glide.with(mContext)
-                    .load(R.drawable.dart_trans)
-                    .crossFade(300)
-                    .into(IV_MENU_IMG)
-            IV_DART.visibility = View.VISIBLE
+//            Glide.with(mContext)
+//                    .load(R.drawable.dart_trans)
+//                    .crossFade(300)
+//                    .into(IV_MENU_IMG)
             IV_MENU_IMG.visibility = View.INVISIBLE
+            TV_LABEL_DESC.visibility = View.INVISIBLE
+            Glide.with(mContext)
+                    .load(R.drawable.loading)
+                    .asGif()
+                    .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                    .into(IV_DART)
+            IV_DART.visibility = View.VISIBLE
 
             IV_MENU_IMG.postDelayed({
 
@@ -117,11 +124,11 @@ class MainActivity : BaseActivity() {
                 BTN_GOOGLE.visibility = View.VISIBLE
                 BTN_RETRY.visibility = View.VISIBLE
 
-                anim.pause()
+//                anim.pause()
                 IV_MENU_IMG.visibility = View.VISIBLE
                 IV_DART.visibility = View.INVISIBLE
 
-            }, 6000)
+            }, 5000)
 
         }
 
@@ -147,6 +154,7 @@ class MainActivity : BaseActivity() {
             BTN_GOTOLAUNCH.visibility = View.GONE
             BTN_GOOGLE.visibility = View.GONE
             BTN_WHATFL.visibility = View.VISIBLE
+            TV_LABEL_DESC.visibility = View.VISIBLE
         }
     }
 

@@ -24,17 +24,9 @@ android {
     signingConfigs {
         qa{
             v2SigningEnabled false
-            keyAlias 'sqapp'
-            keyPassword 'tpdl9fid'
-            storeFile file('saycupid')
-            storePassword 'tpdl9fid'
         }
         debug{
             v2SigningEnabled false
-            keyAlias 'sqapp'
-            keyPassword 'tpdl9fid'
-            storeFile file('saycupid')
-            storePassword 'tpdl9fid'
         }
     }
     buildTypes {
